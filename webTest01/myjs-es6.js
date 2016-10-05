@@ -21,7 +21,7 @@ window.onload = function(){
 		});
 	}
 
-	//画图
+	//画图主函数
 	function painting(){
 		canvas.onmousedown = function(){
 			canvas.addEventListener("mousemove",handler,true);
