@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var name = document.getElementById("name");
+			var btn = document.getElementById("btn");
+			var form = document.getElementById("form");
+			btn.onclick = function(){
+				if((name.value).trim() === ""){
+					alert("请输入昵称");
+					return false;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="login" method="get" id="form">
+		<h1>你画我猜小游戏欢迎你</h1>
+		<input type="text" placehorder="请输入昵称" id="name" name="loginName">
+		<input type="submit" value="点我呀，你点我呀" id="btn">
+	</form>
+</body>
+</html>

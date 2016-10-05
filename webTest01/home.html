@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>你画我猜</title>
+	<style>
+		.title h3:first-child{
+			width: 48%;
+			float: left;
+		}
+		.title h3:last-child{
+			width: 48%;
+			float: right;
+		}
+		canvas{
+			border:1px solid #ccc;
+			float: left;
+		}
+		#content{
+			height:500px;
+			width: 48%;
+			float: right;
+			border:1px solid black;
+			margin-bottom: 20px;
+			overflow-y: scroll;
+		    overflow-x: hidden;
+		    padding-left: 20px;
+		}
+
+		li{
+			list-style: none;
+			font-size:16px;
+		}
+		#send{
+			height:60px;
+			width: 100%;
+			margin-bottom: 20px;
+			overflow: hidden;
+		}
+		#ipt{
+			width: 94%;
+			height: 32px;
+			font-size: 15px;
+			line-height: 32px;
+		}
+		#btn{
+			width: 50px;
+			height: 36px;
+			font-weight: bold;
+			font-size: 15px;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="myjs-es5.js"></script>
+</head>
+<body>
+	<p>欢迎你，<span id="name"></span></p>
+	<div class="title">
+		<h3>画图区 
+			当前操作者：<span id="painter"></span> 
+			剩余时间：<span id="time">20</span>秒
+		</h3>
+		<h3>聊天室</h3>
+	</div>
+	<canvas id="canvas" width="650" height="500"></canvas>
+	<div id="content"></div>
+	<div id="send">
+		<input type="text" id="ipt">
+		<button id="btn">发言</button>
+	</div>
+
+</body>
+</html>
